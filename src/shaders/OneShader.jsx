@@ -1,4 +1,4 @@
-
+export const Vertex = `
 
 varying vec2 vUv;
 uniform vec2 uDelta;
@@ -15,3 +15,15 @@ void main() {
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
 }
+
+`;
+
+
+export const  Fragment = `
+uniform sampler2D uTexture;
+varying vec2 vUv;
+
+void main() {
+    gl_FragColor = texture2D(uTexture, vUv); 
+}
+`

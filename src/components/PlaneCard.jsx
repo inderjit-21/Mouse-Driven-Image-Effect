@@ -1,8 +1,11 @@
 'use client'
 import { useAspect } from "@react-three/drei";
 import React, { useEffect, useRef } from "react";
-import Vertex from '@/shaders/Vertex.glsl'
-import Fragment from '@/shaders/Fragment.glsl'
+// import Vertex from '@/shaders/Vertex.glsl'
+// import Fragment from '@/shaders/Fragment.glsl'
+
+import { Vertex,Fragment } from "@/shaders/OneShader";
+
 import * as THREE from "three";
 
 const PlaneCard = ({texture, index, cardsRef}) => {
